@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dma2skssld1o4"]
+
+[ext_resource type="Texture2D" uid="uid://b10o60mkbgsy8" path="res://sprites/Death_Grip.png" id="1_h4pgc"]
+[ext_resource type="Script" path="res://scenes/cards/Card#3.gd" id="1_ucit4"]
+[ext_resource type="PackedScene" uid="uid://iirewyd8l7v6" path="res://scenes/Card.tscn" id="2_06f6p"]
+
+[node name="Card#3" type="Node2D"]
+script = ExtResource("1_ucit4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, -1.90735e-06)
+scale = Vector2(2, 2)
+texture = ExtResource("1_h4pgc")
+
+[node name="Card" parent="." instance=ExtResource("2_06f6p")]
+
+[connection signal="mouse_entered" from="Card" to="Card" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Card" to="Card" method="_on_mouse_exited"]
